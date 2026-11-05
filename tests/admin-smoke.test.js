@@ -33,6 +33,12 @@ test('admin editor includes controls for copy, images, background, text, and cho
   assert.match(html, /id="background-select"/);
   assert.match(html, /id="add-text-field"/);
   assert.match(html, /id="add-choice-field"/);
+  assert.match(html, /id="image-title-input"/);
+  assert.match(html, /id="image-description-input"/);
+  assert.match(html, /id="response-title-input"/);
+  assert.match(html, /id="response-description-input"/);
+  assert.match(html, /id="submit-title-input"/);
+  assert.match(html, /id="submit-description-input"/);
 });
 
 test('admin editor includes display-image selection and QR controls', () => {
@@ -60,4 +66,5 @@ test('admin editor script saves config through the API', () => {
   assert.match(js, /add-text-field/);
   assert.match(js, /add-choice-field/);
 });
+
 

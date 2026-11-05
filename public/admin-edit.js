@@ -9,6 +9,12 @@ const elements = {
   description: document.querySelector('#description-input'),
   background: document.querySelector('#background-select'),
   imageRequired: document.querySelector('#image-required'),
+  imageTitle: document.querySelector('#image-title-input'),
+  imageDescription: document.querySelector('#image-description-input'),
+  responseTitle: document.querySelector('#response-title-input'),
+  responseDescription: document.querySelector('#response-description-input'),
+  submitTitle: document.querySelector('#submit-title-input'),
+  submitDescription: document.querySelector('#submit-description-input'),
   images: document.querySelector('#images-editor'),
   fields: document.querySelector('#fields-editor'),
   addImage: document.querySelector('#add-image'),
@@ -115,6 +121,12 @@ function syncBasicForm() {
   elements.description.value = config.description;
   elements.background.value = config.background;
   elements.imageRequired.checked = Boolean(config.imageRequired);
+  elements.imageTitle.value = config.sections.image.title;
+  elements.imageDescription.value = config.sections.image.description;
+  elements.responseTitle.value = config.sections.response.title;
+  elements.responseDescription.value = config.sections.response.description;
+  elements.submitTitle.value = config.sections.submit.title;
+  elements.submitDescription.value = config.sections.submit.description;
 }
 
 function moveItem(list, index, direction) {
@@ -128,6 +140,11 @@ function collectConfig() {
   config.description = elements.description.value.trim() || '把这一瞬间，留给值得的人。';
   config.background = elements.background.value;
   config.imageRequired = elements.imageRequired.checked;
+  config.sections = {
+    image: { title: elements.imageTitle.value.trim(), description: elements.imageDescription.value.trim() },
+    response: { title: elements.responseTitle.value.trim(), description: elements.responseDescription.value.trim() },
+    submit: { title: elements.submitTitle.value.trim(), description: elements.submitDescription.value.trim() }
+  };
 
   elements.images.querySelectorAll('[data-image-field]').forEach((input) => {
     const index = Number(input.dataset.index);
@@ -340,3 +357,4 @@ async function init() {
 }
 
 init();
+

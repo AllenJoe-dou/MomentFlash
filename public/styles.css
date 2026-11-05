@@ -315,6 +315,9 @@ a:focus-visible {
 }
 
 .text-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-height: 44px;
   padding: 0 14px;
   border: 1px solid rgba(37, 35, 51, 0.12);
@@ -322,6 +325,8 @@ a:focus-visible {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.72);
   font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
 }
 
 .subsection {
@@ -701,6 +706,8 @@ a:focus-visible {
     filter: none;
   }
 }
+
+
 
 
 

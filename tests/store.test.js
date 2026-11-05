@@ -20,6 +20,20 @@ test('loads and saves config in a data directory', () => {
   assert.equal(loadConfig(dir).title, '测试时刻');
 });
 
+test('normalizes section copy with defaults and custom values', () => {
+  const dir = tempDir();
+  const config = loadConfig(dir);
+  assert.equal(config.sections.image.title, '这一刻，被认真呈现');
+  assert.equal(config.sections.response.title, '写下这一刻');
+  assert.equal(config.sections.submit.title, '准备好了吗？');
+
+  config.sections.image.title = '照片板块';
+  config.sections.response.description = '请填写你的想法';
+  saveConfig(config, dir);
+  const saved = loadConfig(dir);
+  assert.equal(saved.sections.image.title, '照片板块');
+  assert.equal(saved.sections.response.description, '请填写你的想法');
+});
 test('normalizes displayImageId to an existing image', () => {
   const dir = tempDir();
   saveConfig({
@@ -72,4 +86,5 @@ test('rejects missing required text and invalid choices', () => {
   }, config);
   assert.equal(valid.ok, true);
 });
+
 

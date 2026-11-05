@@ -13,7 +13,13 @@ const elements = {
   submit: document.querySelector('#submit-button'),
   toast: document.querySelector('#toast'),
   title: document.querySelector('h1'),
-  description: document.querySelector('#page-description')
+  description: document.querySelector('#page-description'),
+  imageTitle: document.querySelector('#image-title'),
+  imageDescription: document.querySelector('#image-description'),
+  responseTitle: document.querySelector('#response-title'),
+  responseDescription: document.querySelector('#response-description'),
+  submitTitle: document.querySelector('#submit-title'),
+  submitDescription: document.querySelector('#submit-description')
 };
 
 function showToast(message, duration = 2800) {
@@ -115,6 +121,12 @@ function collectAnswers() {
 function renderParticipant() {
   elements.title.textContent = state.config.title;
   elements.description.textContent = state.config.description;
+  elements.imageTitle.textContent = state.config.sections.image.title;
+  elements.imageDescription.textContent = state.config.sections.image.description;
+  elements.responseTitle.textContent = state.config.sections.response.title;
+  elements.responseDescription.textContent = state.config.sections.response.description;
+  elements.submitTitle.textContent = state.config.sections.submit.title;
+  elements.submitDescription.textContent = state.config.sections.submit.description;
   state.background = state.config.background || 'pink-plum';
   renderDisplayImage();
   renderFields();
@@ -190,5 +202,7 @@ async function init() {
 }
 
 init();
+
+
 
 

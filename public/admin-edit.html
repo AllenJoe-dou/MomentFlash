@@ -58,7 +58,20 @@
 
       <section class="editor-section">
         <div class="editor-heading">
-          <div><span class="section-index">02</span><h2>展示图片与预设</h2></div>
+          <div><span class="section-index">02</span><h2>板块名称与说明</h2></div>
+        </div>
+        <div class="editor-grid">
+          <label>图片板块名称<input id="image-title-input" type="text" maxlength="40" required></label>
+          <label>图片板块说明<input id="image-description-input" type="text" maxlength="100" required></label>
+          <label>填写板块名称<input id="response-title-input" type="text" maxlength="40" required></label>
+          <label>填写板块说明<input id="response-description-input" type="text" maxlength="100" required></label>
+          <label>提交板块名称<input id="submit-title-input" type="text" maxlength="40" required></label>
+          <label>提交板块说明<input id="submit-description-input" type="text" maxlength="100" required></label>
+        </div>
+      </section>
+      <section class="editor-section">
+        <div class="editor-heading">
+          <div><span class="section-index">03</span><h2>展示图片与预设</h2></div>
           <div class="editor-actions">
             <label class="text-button" for="image-upload-admin">上传图片<input id="image-upload-admin" type="file" accept="image/*" hidden></label>
             <button id="add-image" class="text-button" type="button">添加图片链接</button>
@@ -69,7 +82,7 @@
 
       <section class="editor-section">
         <div class="editor-heading">
-          <div><span class="section-index">03</span><h2>文本栏与选项栏</h2></div>
+          <div><span class="section-index">04</span><h2>文本栏与选项栏</h2></div>
           <div class="editor-actions">
             <button id="add-text-field" class="text-button" type="button">添加文本栏</button>
             <button id="add-choice-field" class="primary-button" type="button">添加选项栏</button>
@@ -79,7 +92,7 @@
       </section>
       <section class="editor-section qr-section">
         <div class="editor-heading">
-          <div><span class="section-index">04</span><h2>参与者二维码</h2></div>
+          <div><span class="section-index">05</span><h2>参与者二维码</h2></div>
           <div class="editor-actions">
             <button id="generate-qr-secondary" class="text-button" type="button">刷新二维码</button>
             <button id="save-qr-secondary" class="primary-button" type="button">保存二维码</button>
@@ -103,5 +116,6 @@
   <script src="/admin-edit.js"></script>
 </body>
 </html>
+
 
 

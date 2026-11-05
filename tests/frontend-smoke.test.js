@@ -16,6 +16,12 @@ test('participant page includes display image, fields, background picker, and su
   assert.doesNotMatch(html, /id="clear-image"/);
   assert.match(html, /id="display-image"/);
   assert.match(html, /id="display-image-frame"/);
+  assert.match(html, /id="image-title"/);
+  assert.match(html, /id="image-description"/);
+  assert.match(html, /id="response-title"/);
+  assert.match(html, /id="response-description"/);
+  assert.match(html, /id="submit-title"/);
+  assert.match(html, /id="submit-description"/);
   assert.match(html, /id="fields-container"/);
   assert.match(html, /id="submit-button"/);
   assert.doesNotMatch(html, /id="background-picker"/);
@@ -62,6 +68,7 @@ test('participant app wires API calls and accessible form labels', () => {
   assert.doesNotMatch(js, /data-theme/);
   assert.doesNotMatch(js, /FormData/);
 });
+
 
 
 
