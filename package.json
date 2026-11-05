@@ -1,0 +1,19 @@
+{
+  "name": "yishan-moment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一闪 Moment - liquid glass interactive submission experience",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "multer": "^2.5.0",
+    "qrcode": "^1.5.4"
+  }
+}

@@ -1,0 +1,13 @@
+node_modules/
+uploads/*
+!uploads/.gitkeep
+.env
+.env.*
+*.log
+.DS_Store
+
+data/submissions.json
+
+
+data/admin-auth.json
+

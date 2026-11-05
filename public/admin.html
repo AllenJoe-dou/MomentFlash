@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>提交记录 · 一闪 Moment</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-page">
+  <header class="admin-topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">✦</span>
+      <span><strong>一闪 Moment</strong><small>操作台</small></span>
+    </a>
+    <nav class="admin-nav" aria-label="管理导航">
+      <a class="active" href="/admin">提交记录</a>
+      <a href="/admin/edit">页面配置</a>
+      <a href="/">查看页面</a>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-heading">
+      <div>
+        <p class="eyebrow">Submission inbox</p>
+        <h1>提交记录</h1>
+        <p>查看对方选择的选项、填写的文字和使用的图片。</p>
+      </div>
+      <a class="primary-button" href="/admin/edit">编辑页面配置</a>
+    </section>
+
+    <section class="stat-strip" aria-label="提交概览">
+      <div><strong id="submission-count">0</strong><span>全部提交</span></div>
+      <div><strong id="today-count">0</strong><span>今日提交</span></div>
+      <div><strong id="image-count">0</strong><span>使用自定义图片</span></div>
+    </section>
+
+    <section class="table-panel">
+      <div class="table-toolbar">
+        <label class="search-box" for="search-input">
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="搜索文字、选项、图片或背景" aria-label="搜索提交记录">
+        </label>
+        <div class="toolbar-actions">
+          <button id="refresh-button" class="text-button" type="button">刷新</button>
+          <button id="export-button" class="primary-button" type="button">导出 CSV</button>
+        </div>
+      </div>
+      <div class="table-scroll">
+        <table id="submission-table">
+          <thead>
+            <tr>
+              <th>提交时间</th>
+              <th>图片</th>
+              <th>背景</th>
+              <th>回答内容</th>
+              <th>查看</th>
+            </tr>
+          </thead>
+          <tbody id="submission-body"></tbody>
+        </table>
+      </div>
+      <div id="empty-state" class="empty-state" hidden>
+        <strong>还没有提交记录</strong>
+        <span>参与者提交后，内容会显示在这里。</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin.js"></script>
+</body>
+</html>
+

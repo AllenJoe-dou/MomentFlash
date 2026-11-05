@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>管理员登录 · 一闪 Moment</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-page login-page">
+  <main class="login-shell">
+    <section class="login-panel">
+      <a class="brand" href="/">
+        <span class="brand-mark">✦</span>
+        <span><strong>一闪 Moment</strong><small>操作台验证</small></span>
+      </a>
+      <div class="login-heading">
+        <p class="eyebrow">Admin access</p>
+        <h1>管理员登录</h1>
+        <p>请输入操作台账号和密码。</p>
+      </div>
+      <form id="login-form" class="login-form">
+        <label>账号<input id="username" name="username" type="text" autocomplete="username" required></label>
+        <label>密码<input id="password" name="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary-button" type="submit">进入操作台</button>
+        <p id="login-error" class="login-error" role="alert" hidden></p>
+      </form>
+    </section>
+  </main>
+  <script src="/admin-login.js"></script>
+</body>
+</html>

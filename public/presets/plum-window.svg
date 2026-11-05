@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffd7e5"/><stop offset="0.5" stop-color="#d9c8ff"/><stop offset="1" stop-color="#8bdbe5"/></linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="18" flood-opacity=".2"/></filter>
+  </defs>
+  <rect width="800" height="600" fill="url(#sky)"/>
+  <circle cx="645" cy="132" r="74" fill="#fff7df" opacity=".88"/>
+  <path d="M0 470 C140 390 235 505 360 432 C500 350 620 430 800 342 V600 H0Z" fill="#9876c8" opacity=".32"/>
+  <g filter="url(#shadow)" stroke="#4e3152" stroke-width="15" fill="none" stroke-linecap="round">
+    <path d="M78 442 C162 326 188 228 168 76"/>
+    <path d="M168 216 C248 176 308 110 352 52"/>
+    <path d="M160 312 C250 294 312 316 382 286"/>
+    <path d="M134 380 C76 330 58 282 54 230"/>
+  </g>
+  <g fill="#ff6f9f" stroke="#fff0f6" stroke-width="6">
+    <g transform="translate(170 96)"><circle r="18"/><circle cx="-25" cy="6" r="18"/><circle cx="25" cy="6" r="18"/><circle cx="-14" cy="-22" r="18"/><circle cx="14" cy="-22" r="18"/></g>
+    <g transform="translate(344 76) scale(.9)"><circle r="18"/><circle cx="-25" cy="6" r="18"/><circle cx="25" cy="6" r="18"/><circle cx="-14" cy="-22" r="18"/><circle cx="14" cy="-22" r="18"/></g>
+    <g transform="translate(388 286) scale(1.12)"><circle r="18"/><circle cx="-25" cy="6" r="18"/><circle cx="25" cy="6" r="18"/><circle cx="-14" cy="-22" r="18"/><circle cx="14" cy="-22" r="18"/></g>
+    <g transform="translate(58 228) scale(.82)"><circle r="18"/><circle cx="-25" cy="6" r="18"/><circle cx="25" cy="6" r="18"/><circle cx="-14" cy="-22" r="18"/><circle cx="14" cy="-22" r="18"/></g>
+    <g transform="translate(272 202) scale(.72)"><circle r="18"/><circle cx="-25" cy="6" r="18"/><circle cx="25" cy="6" r="18"/><circle cx="-14" cy="-22" r="18"/><circle cx="14" cy="-22" r="18"/></g>
+  </g>
+  <rect x="480" y="344" width="218" height="154" rx="8" fill="#fff" opacity=".72" filter="url(#shadow)"/>
+  <rect x="505" y="370" width="168" height="10" rx="5" fill="#c989a9" opacity=".58"/>
+  <rect x="505" y="398" width="130" height="8" rx="4" fill="#c989a9" opacity=".38"/>
+  <rect x="505" y="423" width="154" height="8" rx="4" fill="#c989a9" opacity=".38"/>
+</svg>

@@ -1,0 +1,64 @@
+{
+  "title": "一闪 Moment",
+  "description": "把这一瞬间，留给值得的人。",
+  "background": "pink-plum",
+  "imageRequired": true,
+  "images": [
+    {
+      "id": "plum-window",
+      "label": "梅花窗景",
+      "url": "/presets/plum-window.svg"
+    },
+    {
+      "id": "city-light",
+      "label": "城市流光",
+      "url": "/presets/city-light.svg"
+    },
+    {
+      "id": "ocean-breeze",
+      "label": "海风蓝调",
+      "url": "/presets/ocean-breeze.svg"
+    },
+    {
+      "id": "1793843369569-7ca0d18b-7c0c-4bec-846b-25e94d76313d.png",
+      "label": "ascii-2-1",
+      "url": "/uploads/1793843369569-7ca0d18b-7c0c-4bec-846b-25e94d76313d.png"
+    }
+  ],
+  "fields": [
+    {
+      "id": "mood",
+      "type": "choice",
+      "label": "个人评价",
+      "required": false,
+      "selection": "single",
+      "options": [
+        {
+          "id": "warm",
+          "label": "小子多练"
+        },
+        {
+          "id": "joyful",
+          "label": "你是个好人"
+        },
+        {
+          "id": "calm",
+          "label": "平静"
+        },
+        {
+          "id": "miss",
+          "label": "想念"
+        }
+      ]
+    },
+    {
+      "id": "message",
+      "type": "text",
+      "label": "想说的话",
+      "placeholder": "写下此刻最想说的……",
+      "required": false,
+      "maxLength": 500
+    }
+  ],
+  "displayImageId": "plum-window"
+}

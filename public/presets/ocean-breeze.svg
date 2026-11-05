@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#a7f4f1"/><stop offset=".42" stop-color="#46bcd2"/><stop offset="1" stop-color="#124c88"/></linearGradient>
+    <radialGradient id="bubble"><stop stop-color="#fff" stop-opacity=".82"/><stop offset=".3" stop-color="#d5ffff" stop-opacity=".18"/><stop offset="1" stop-color="#4ed2ec" stop-opacity=".03"/></radialGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#sea)"/>
+  <path d="M0 120 C120 54 222 166 338 102 C468 30 560 134 800 64 V0 H0Z" fill="#e9ffff" opacity=".44"/>
+  <g fill="url(#bubble)" stroke="#d9ffff" stroke-opacity=".34">
+    <circle cx="120" cy="420" r="62"/><circle cx="260" cy="284" r="38"/><circle cx="370" cy="452" r="82"/><circle cx="522" cy="332" r="54"/><circle cx="662" cy="214" r="30"/><circle cx="714" cy="438" r="72"/><circle cx="574" cy="512" r="28"/><circle cx="208" cy="118" r="22"/>
+  </g>
+  <g fill="none" stroke="#e5ffff" stroke-opacity=".24" stroke-width="8">
+    <path d="M-40 240 C132 164 256 314 424 230 C572 156 710 278 852 212"/>
+    <path d="M-40 286 C132 210 256 360 424 276 C572 202 710 324 852 258"/>
+  </g>
+  <path d="M0 520 C126 474 230 560 356 510 C500 452 644 552 800 488 V600 H0Z" fill="#0a376a" opacity=".42"/>
+</svg>

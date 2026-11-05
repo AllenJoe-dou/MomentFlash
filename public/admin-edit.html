@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>页面配置 · 一闪 Moment</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/admin.css">
+</head>
+<body class="admin-page">
+  <header class="admin-topbar">
+    <a class="brand" href="/">
+      <span class="brand-mark">✦</span>
+      <span><strong>一闪 Moment</strong><small>操作台</small></span>
+    </a>
+    <nav class="admin-nav" aria-label="管理导航">
+      <a href="/admin">提交记录</a>
+      <a class="active" href="/admin/edit">页面配置</a>
+      <a href="/">查看页面</a>
+    </nav>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-heading">
+      <div>
+        <p class="eyebrow">Page setup</p>
+        <h1>页面配置</h1>
+        <p>设置参与者看到的图片、背景、文本栏和选项栏。</p>
+      </div>
+      <div class="heading-actions">
+        <a class="text-button" href="/">预览页面</a>
+        <button id="generate-qr" class="text-button" type="button">生成二维码</button>
+        <button id="save-qr" class="text-button" type="button">保存二维码</button>
+        <button id="save-config" class="primary-button" type="button">保存配置</button>
+      </div>
+    </section>
+
+    <form id="config-form">
+      <section class="editor-section">
+        <div class="editor-heading">
+          <div><span class="section-index">01</span><h2>基础文案</h2></div>
+        </div>
+        <div class="editor-grid">
+          <label>页面标题<input id="title-input" type="text" maxlength="60" required></label>
+          <label>页面说明<input id="description-input" type="text" maxlength="140" required></label>
+          <label>默认背景
+            <select id="background-select">
+              <option value="pink-plum">粉色梅花</option>
+              <option value="violet-flow">蓝紫流光</option>
+              <option value="golden-hour">暖金夕阳</option>
+              <option value="ocean-bubble">深海气泡</option>
+            </select>
+          </label>
+          <label class="check-label"><input id="image-required" type="checkbox"><span>提交时必须选择图片</span></label>
+        </div>
+      </section>
+
+      <section class="editor-section">
+        <div class="editor-heading">
+          <div><span class="section-index">02</span><h2>展示图片与预设</h2></div>
+          <div class="editor-actions">
+            <label class="text-button" for="image-upload-admin">上传图片<input id="image-upload-admin" type="file" accept="image/*" hidden></label>
+            <button id="add-image" class="text-button" type="button">添加图片链接</button>
+          </div>
+        </div>
+        <div id="images-editor" class="stack-editor"></div>
+      </section>
+
+      <section class="editor-section">
+        <div class="editor-heading">
+          <div><span class="section-index">03</span><h2>文本栏与选项栏</h2></div>
+          <div class="editor-actions">
+            <button id="add-text-field" class="text-button" type="button">添加文本栏</button>
+            <button id="add-choice-field" class="primary-button" type="button">添加选项栏</button>
+          </div>
+        </div>
+        <div id="fields-editor" class="stack-editor"></div>
+      </section>
+      <section class="editor-section qr-section">
+        <div class="editor-heading">
+          <div><span class="section-index">04</span><h2>参与者二维码</h2></div>
+          <div class="editor-actions">
+            <button id="generate-qr-secondary" class="text-button" type="button">刷新二维码</button>
+            <button id="save-qr-secondary" class="primary-button" type="button">保存二维码</button>
+          </div>
+        </div>
+        <div class="qr-layout">
+          <div class="qr-preview-wrap">
+            <img id="qr-preview" alt="参与者页面二维码" hidden>
+            <div id="qr-placeholder" class="qr-placeholder">生成后显示二维码</div>
+          </div>
+          <div class="qr-copy">
+            <strong>二维码地址</strong>
+            <code id="qr-url">http://localhost:3000/</code>
+            <p>二维码自动使用当前访问地址，指向参与者首页。</p>
+          </div>
+        </div>
+      </section>    </form>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/admin-edit.js"></script>
+</body>
+</html>
+
+
